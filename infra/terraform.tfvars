@@ -21,3 +21,6 @@ layer = "app"
 # 1. Cold start. 0: with no requests, no instance runs, and the next visitor waits while one starts.
 #    1: one instance always waits, billed while idle. Put it back to 0 after the lab
 web_min_instances = 0
+signups_per_minute_per_ip = 5000
+worker_delay_ms           = 2000
+prewarm                   = { instances = 0, minutes_before = 15, minutes_after = 60 }
