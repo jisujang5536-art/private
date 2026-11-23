@@ -1,0 +1,18 @@
+.venv/
+.data/
+.env
+__pycache__/
+.pytest_cache/
+infra/.terraform/
+infra/bootstrap/.terraform/
+infra/*.tfstate*
+infra/bootstrap/*.tfstate*
+.ruff_cache/
+infra/backend.hcl
+infra/bootstrap/backend.hcl
+# The Terraform session commits its settings (./lab bootstrap), even where a global rule hides *.tfvars
+!infra/terraform.tfvars
+!infra/bootstrap/terraform.tfvars
+infra/*tfplan
+gha-creds-*.json
+infra/lab.*.txt
